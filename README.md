@@ -7,8 +7,11 @@ sbt is a build tool for Scala, Java, and more. It requires Java 1.8 or later.
 
 Install sbt on Linux:
 >echo "deb https://dl.bintray.com/sbt/debian /" | sudo tee -a /etc/apt/sources.list.d/sbt.list
+
 >sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 2EE0EA64E40A89B84B2DF73499E82A75642AC823
+
 >sudo apt-get update
+
 >sudo apt-get install sbt
 
 2.Create a project with sbt
