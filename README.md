@@ -1,5 +1,5 @@
 # Scala_with_sbt
-Summary of how to set up Scala development  environment  without IDE on Linux.
+Summary of how to set_up Scala development  environment  without IDE on Linux.
 
 1.Download sbt
 
