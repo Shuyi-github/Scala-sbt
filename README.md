@@ -75,4 +75,5 @@ application-arguments: Arguments passed to the main method of your main class, i
 
 Reference:
 1.https://www.scala-sbt.org/
+
 2.https://spark.apache.org/docs/latest/submitting-applications.html
