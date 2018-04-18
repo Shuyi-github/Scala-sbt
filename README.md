@@ -2,6 +2,7 @@
 Summary of how to set up Scala development  environment  without IDE on Linux.
 
 1.Download sbt
+
 sbt is a build tool for Scala, Java, and more. It requires Java 1.8 or later.
 
 Install sbt on Linux:
@@ -35,23 +36,31 @@ write scala program in .scala file
 define package in .scala file like:
 
 //Unlike Java, in Scala, the file’s package name doesn’t have to match the directory name.
-package com.appliedscala.test
+>package com.appliedscala.test
 
-object Main extends App {
+>object Main extends App {
     println("Hello, world")
 }
 
-import lib, type”libraryDependencies += groupID % artifactID % revision” in build.sbt file
+import lib:type below in build.sbt file
+>libraryDependencies += groupID % artifactID % revision 
+
 e.g.
-libraryDependencies ++= Seq(
-"org.apache.spark" %% "spark-core" % "2.3.0", 
-"org.apache.spark" %% "spark-sql" %”2.3.0”,
-"org.scalanlp" %% "breeze" % "0.12",
-)
+>libraryDependencies ++= Seq(
+
+>"org.apache.spark" %% "spark-core" % "2.3.0", 
+
+>"org.apache.spark" %% "spark-sql" %”2.3.0”,
+
+>"org.scalanlp" %% "breeze" % "0.12",
+
+>)
 
 after program:
 >sbt compile
+
 >sbt run
+
 >sbt package
 
 2.Launching Scala Applications with spark-submit
@@ -67,10 +76,15 @@ after program:
 Some of the commonly used options are:
 
 --class: The entry point for your application (e.g. org.apache.spark.examples.SparkPi)
+
 --master: The master URL for the cluster (e.g. spark://23.195.26.187:7077)
---deploy-mode: Whether to deploy your driver on the worker nodes (cluster) or locally as an external client (client) (default: client) †
+
+--deploy-mode: Whether to deploy your driver on the worker nodes (cluster) or locally as an external client (client) (default: client) 
+
 --conf: Arbitrary Spark configuration property in key=value format. For values that contain spaces wrap “key=value” in quotes (as shown).
+
 application-jar: Path to a bundled jar including your application and all dependencies. The URL must be globally visible inside of your cluster, for instance, an hdfs:// path or a file:// path that is present on all nodes.
+
 application-arguments: Arguments passed to the main method of your main class, if any
 
 Reference:
