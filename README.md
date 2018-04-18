@@ -19,20 +19,28 @@ cd to the directory where you want to create a scala project.
 type "sbt" to start sbt
 commands:
 >show name		//show directory name
-version		
-organization	
+
+>show version	
+
+>show organization	
 
 >//all these things we set will write into build.sbt
 >set name := "Your project name"	
-         version := "1.0"			//Set the project version
-         organization := "org.example"	
+
+>set version := "1.0"			//Set the project version
+
+>set organization := "org.example"	
 >//this is a reverse domain name that you own, typically one specific to your project. It is used as a namespace for projects.
          scalaVersion:=”2.11.8”
+         
 >session save
+
 >exit
 
 >//create src path to write scala file 
+
 >mkdir -p src/main/scala
+
 >touch src/main/scala/test.scala
 
 write scala program in .scala file
